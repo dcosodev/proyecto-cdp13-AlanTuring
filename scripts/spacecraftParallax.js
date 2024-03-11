@@ -10,7 +10,7 @@ function logoClick() {
     scale: 0.5,
     ease: "back.in",
     onComplete: () => {
-      window.location.href = "./index.html"; 
+      window.location.href = "./indexPlayer.html"; 
     },
   });
 }
