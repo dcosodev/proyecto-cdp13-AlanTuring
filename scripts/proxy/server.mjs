@@ -5,7 +5,7 @@
 
 
 
-
+import path from 'path';
 import express from 'express';
 import fetch from 'node-fetch'; 
 import { fileURLToPath } from 'url';
@@ -25,7 +25,7 @@ app.use(cors());
 
 app.all('/searchLyrics', async (req, res) => { // Ruta para buscar letras de canciones a través del proxy.
     const { lyrics } = req.query;
-    const apiKey = 'e25726ebd93dabda83aa61333750ffca';
+    const apiKey = process.env.MUSIXMATCH_API_KEY;
     // URL de la API de Musixmatch para buscar letras de canciones.
     const url = `https://api.musixmatch.com/ws/1.1/track.search?q_lyrics=${encodeURIComponent(lyrics)}&apikey=${apiKey}&page_size=10&page=1&s_track_rating=desc`; 
 
@@ -41,7 +41,7 @@ app.all('/searchLyrics', async (req, res) => { // Ruta para buscar letras de can
 
 app.all('/fetchLyrics', async (req, res) => { // Ruta para buscar las letras de una canción a través del proxy.
     const { track_id } = req.query;
-    const apiKey = 'e25726ebd93dabda83aa61333750ffca';
+    const apiKey = process.env.MUSIXMATCH_API_KEY;
     // URL de la API de Musixmatch para buscar las letras de una canción.
     const url = `https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${track_id}&apikey=${apiKey}`;
 
