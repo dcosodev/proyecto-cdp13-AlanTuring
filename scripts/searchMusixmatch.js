@@ -62,7 +62,7 @@ function handleWindowClick(event, modal) {
 }
 
 function searchLyricsThroughProxy(lyrics) { // Función para buscar letras a través del proxy.
-  const proxyUrl = "${baseUrl}/searchLyrics"; 
+  const proxyUrl = `${baseUrl}/searchLyrics`; 
   fetch(`${proxyUrl}?lyrics=${encodeURIComponent(lyrics)}`)
     .then((response) => response.json())
     .then((data) => handleSearchResults(data))
@@ -127,7 +127,7 @@ function createTrackButton(track) {
 }
 
 function fetchLyrics(trackId) {
-  const proxyUrl = "${baseUrl}/fetchLyrics";
+  const proxyUrl = `${baseUrl}/fetchLyrics`;
   fetch(`${proxyUrl}?track_id=${trackId}`)
     .then((response) => response.json()) 
     .then((data) => handleLyricsResult(data)) /// Llama a la función para manejar los resultados de las letras.
