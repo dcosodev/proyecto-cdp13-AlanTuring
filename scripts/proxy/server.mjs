@@ -8,13 +8,18 @@
 
 import express from 'express';
 import fetch from 'node-fetch'; 
+import { fileURLToPath } from 'url';
 import cors from 'cors';
 
 const app = express(); // Creo una instancia de express.
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`)); // Puerto en el que se ejecutará el servidor.
+
+app.use(express.static(path.join(__dirname, '..', '..', '/')));
 
 app.use(cors());
 
@@ -51,4 +56,4 @@ app.get('/fetchLyrics', async (req, res) => { // Ruta para buscar las letras de 
 });
 
 
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Server running on ${PORT}`));
