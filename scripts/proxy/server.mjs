@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, '..', '..', '/')));
 
 app.use(cors());
 
-app.get('/searchLyrics', async (req, res) => { // Ruta para buscar letras de canciones a través del proxy.
+app.all('/searchLyrics', async (req, res) => { // Ruta para buscar letras de canciones a través del proxy.
     const { lyrics } = req.query;
     const apiKey = 'e25726ebd93dabda83aa61333750ffca';
     // URL de la API de Musixmatch para buscar letras de canciones.
@@ -39,7 +39,7 @@ app.get('/searchLyrics', async (req, res) => { // Ruta para buscar letras de can
     }
 });
 
-app.get('/fetchLyrics', async (req, res) => { // Ruta para buscar las letras de una canción a través del proxy.
+app.all('/fetchLyrics', async (req, res) => { // Ruta para buscar las letras de una canción a través del proxy.
     const { track_id } = req.query;
     const apiKey = 'e25726ebd93dabda83aa61333750ffca';
     // URL de la API de Musixmatch para buscar las letras de una canción.
