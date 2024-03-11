@@ -1,0 +1,49 @@
+.button {
+  font-family: "Roboto", sans-serif;
+  color: $light-text;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+
+  @include transition(background-color);
+
+  &.is-primary {
+    background-color: $primary-color;
+    color: $light-text;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+.card {
+  background-color: $secondary-color;
+  border-radius: 8px;
+  overflow: hidden;
+  @include transition(all);
+
+  &:hover {
+    @include hover-effect;
+  }
+
+  .card-image {
+    width: 100%;
+    display: block;
+  }
+
+  .card-content {
+    padding: 0.5rem;
+
+    .title {
+      font-size: 14px;
+      margin: 0.5rem 0;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      margin: 0;
+    }
+  }
+}

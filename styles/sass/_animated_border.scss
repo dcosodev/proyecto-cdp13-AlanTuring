@@ -1,0 +1,30 @@
+// Keyframes para animación del borde que se mueve alrededor
+
+$border-size: 2px;
+
+@keyframes borderAnime {
+  0%,
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% $border-size, 0% $border-size);
+  }
+  25% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  50% {
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+  }
+  75% {
+    clip-path: polygon(100% 100%, 0% 100%, 0 0, 100% 0);
+  }
+}
+
+#headerLogo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: borderAnime 8s linear infinite;
+  border: $border-size solid $primary-color;
+}

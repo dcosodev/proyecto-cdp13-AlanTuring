@@ -1,0 +1,51 @@
+form {
+  fieldset {
+    border: none;
+    legend {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    label {
+      margin-top: 10px;
+      display: block;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+      width: 100%;
+      font-size: 26px;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      border-radius: 8px;
+    }
+    // Validación de campos
+    input[type="text"]:valid:focus,
+    input[type="password"]:valid:focus,
+    input[type="email"]:valid:focus {
+      background-color: $primary-color;
+    }
+
+    input[type="text"]:invalid:focus,
+    input[type="password"]:invalid:focus,
+    input[type="email"]:invalid:focus {
+      background-color: #ea4b4b;
+    }
+
+    .form-actions {
+      margin-top: 20px;
+      input[type="submit"],
+      input[type="button"] {
+        width: auto;
+        padding: 10px 18px;
+        margin-right: 10px;
+        border-radius: 8px;
+        color: $light-text;
+        border: 1px solid #ccc;
+        background-color: $primary-color;
+      }
+    }
+  }
+}

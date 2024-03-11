@@ -1,0 +1,70 @@
+.sidebar {
+  background-color: $secondary-color;
+  color: $light-text;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  height: 100%;
+  z-index: 1000;
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+
+  &.is-expanded {
+    transform: translateX(0);
+  }
+
+  .sidebar-top {
+    .sidebar-logo {
+      height: 120px;
+      width: 150px;
+      margin-left: 30px;
+      margin-top: 60px;
+    }
+  }
+
+  .sidebar-middle {
+    .nav-item,
+    .button {
+      margin: 1rem 0;
+      padding: 2rem 2rem;
+      border-radius: 20px;
+      background-color: $primary-color;
+      @include transition(background-color);
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+
+  .sidebar-bottom {
+    .nav-item {
+      margin: 1rem 0;
+      padding: 2rem 2rem;
+      border-radius: 20px;
+      background-color: $primary-color;
+      @include transition(background-color);
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+
+  .nav-link,
+  .footer-nav-link {
+    display: block;
+    padding: 2.5rem;
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+  }
+
+  .button {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}

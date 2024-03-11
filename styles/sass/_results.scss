@@ -1,0 +1,45 @@
+#resultsContent {
+  padding: 20px;
+  max-width: 900px;
+  overflow-y: auto;
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      font-family: "Roboto", sans-serif;
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: $secondary-color;
+      color: $light-text;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+
+  .search-result-button {
+    font-family: "Roboto", sans-serif;
+    background-color: $secondary-color;
+    font-size: 24px;
+    border: none;
+    color: $light-text;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+
+  .lyrics {
+    white-space: pre-wrap;
+    margin-top: 20px;
+    background-color: $secondary-color;
+    color: $light-text;
+    padding: 15px;
+    border-radius: 5px;
+  }
+}

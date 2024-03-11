@@ -1,0 +1,57 @@
+header {
+  background-color: $secondary-color;
+  padding: 1rem 0;
+
+  .container {
+    max-width: 1920px;
+    width: 100%;
+    padding: 0 15px;
+  }
+  #headerLogo {
+    display: inline-block;
+    position: relative;
+    width: 149px;
+    height: 174px;
+  }
+
+  .navbar {
+    width: 100%;
+
+    .navbar-brand {
+      .logo {
+        @include flex-start;
+        height: 120px;
+        width: 150px;
+        margin-top: 2rem;
+      }
+    }
+
+    .navbar-menu {
+      @include flex-end;
+
+      .search-bar {
+        margin-right: 1rem;
+
+        input[type="search"] {
+          padding: 0.5rem;
+          border: none;
+          border-radius: 20px;
+        }
+      }
+
+      .nav-item,
+      .nav-item_login,
+      .nav-item_signup {
+        margin-left: 1rem;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        background-color: $primary-color;
+        @include transition(background-color);
+
+        &:hover {
+          background-color: darken($primary-color, 10%);
+        }
+      }
+    }
+  }
+}

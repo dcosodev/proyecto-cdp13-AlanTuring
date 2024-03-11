@@ -1,0 +1,41 @@
+main {
+  width: 100%;
+  max-width: 1920px;
+
+  margin-left: 250px;
+
+  .section {
+    margin-bottom: 2rem;
+
+    .section-title {
+      font-size: 24px;
+      margin-bottom: 1rem;
+    }
+
+    .playlist-items {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(200px, 1fr));
+      gap: 3rem;
+
+      .playlist-item {
+        @include transition(all);
+
+        &:hover {
+          @include hover-effect;
+        }
+
+        .playlist-cover {
+          width: 200px;
+          height: 200px;
+
+          border-radius: 8px;
+        }
+
+        .playlist-name {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        }
+      }
+    }
+  }
+}
