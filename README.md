@@ -1,4 +1,4 @@
-Este proyecto es una aplicación web que permite a los usuarios buscar letras de canciones utilizando la API de Musixmatch.
+Este proyecto es una aplicación web que permite a los usuarios buscar letras de canciones utilizando la API de Musixmatch, reproducir canciones conectando con embed de SoundCloud, registrarse y iniciar sesión. 
 
 Instrucciones de despliegue local:
 1. Clonar el repositorio.
