@@ -1,9 +1,32 @@
+# Spotify Clone
+
 Este proyecto es una aplicación web que permite a los usuarios buscar letras de canciones utilizando la API de Musixmatch, reproducir canciones conectando con embed de SoundCloud, registrarse y iniciar sesión. 
 
-Instrucciones de despliegue local:
-1. Clonar el repositorio.
-2. Ejecutar 'npm install' para instalar las dependencias.
-3. Configurar las variables de entorno necesarias en un archivo '.env' en la raíz del proyecto. Se requiere la siguiente variable:
-   - MUSIXMATCH_API_KEY: Tu clave de API de Musixmatch.
-4. Ejecutar 'npm start' para iniciar el servidor.
-5. Acceder a la aplicación a través de 'http://localhost:3000' en un navegador.
+## Features
+
+- Buscar letras de canciones utilizando la API de Musixmatch
+- Reproducir canciones conectando con embed de SoundCloud.
+- Registrarse y iniciar sesión. 
+
+## Technologies Used
+
+- Vanilla JavaScript
+- Sass
+- Node.js con Express
+- Musixmatch API
+- SoundCloud
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js
+
+### Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/proyecto_CDP13_AlanTuring.git
+ 
+
