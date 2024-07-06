@@ -27,6 +27,6 @@ Este proyecto es una aplicación web que permite a los usuarios buscar letras de
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/proyecto_CDP13_AlanTuring.git
+   git clone https://github.com/dcosodev/proyecto-cdp13-AlanTuring.git
  
 
